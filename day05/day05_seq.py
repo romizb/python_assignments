@@ -5,6 +5,7 @@ from collections import Counter
  #       exit(f"to use this program write: python {sys.argv[0]} <filename> <filename> ...") #how to input
 
 def statistics_NTP(sequence):
+    sequence = sequence.upper() #so that it is not case sensative 
     counts = Counter(sequence)
     total = sum(counts.values())
     stats = {
@@ -34,7 +35,7 @@ def main(files):
             sequence = f.read().strip()
         stats = statistics_NTP(sequence)
         display_statistics(stats, f"{file}")
-        overall_counts.update(Counter(sequence))
+        overall_counts.update(Counter(sequence.upper())) #so not case sensative
     
     overall_stats = statistics_NTP(overall_counts.elements())
     display_statistics(overall_stats, "All")
