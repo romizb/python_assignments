@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            background: linear-gradient(135deg, #ff99cc, #ffccff, #99ccff);
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ff66b2;
+            margin-top: 20px;
+            text-shadow: 2px 2px 0 #ffccff, -2px -2px 0 #ffccff;
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #660099;
+            text-shadow: 1px 1px 0 #ffccff;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+
+        /* Input Field Styling */
+        input[type="text"] {
+            font-size: 1.2em;
+            width: 80%; /* Adjust the width to fit longer text */
+            padding: 10px;
+            border: 2px solid #ff99cc;
+            border-radius: 15px;
+            background: #ffffff;
+            box-shadow: 0 0 10px #ff99cc;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #ff66b2;
+            box-shadow: 0 0 15px #ff66b2;
+            background: #ffeeff;
+        }
+
+        /* Button Styling */
+        button {
+            font-size: 1.2em;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #ff99cc, #ff66b2);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            text-shadow: 1px 1px 0 #660099;
+            box-shadow: 0 4px #660099;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #ff66b2, #ff99cc);
+            box-shadow: 0 6px #660099;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            background: #ff66b2;
+            box-shadow: 0 2px #660099;
+            transform: translateY(2px);
+        }
+
+        /* Message Styling */
+        .message {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff3366;
+            text-shadow: 1px 1px 0 #ffccff, -1px -1px 0 #ffccff;
+            margin-top: 20px;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Fun Sparkle Animations */
+        body::before, body::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, #ffffff 20%, transparent 70%);
+            border-radius: 50%;
+            animation: sparkle 5s infinite linear;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        body::before {
+            top: -50px;
+            left: -50px;
+        }
+
+        body::after {
+            bottom: -50px;
+            right: -50px;
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                transform: translate(0, 0);
+                opacity: 0.6;
+            }
+            50% {
+                transform: translate(50px, 50px);
+                opacity: 0.8;
+            }
+        }
+
+        /* Dog-related styles */
+        .dog-emoji {
+            font-size: 2em;
+            animation: wag 0.5s infinite alternate;
+        }
+
+        @keyframes wag {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(10deg);
+            }
+        }
+
+        .dog-image {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🌟 Number Guessing Game 🌟</h1>
+    <div class="dog-emoji">🐶</div> <!-- Cute dog emoji -->
+    <div class="dog-image">
+        <img src="https://i.pinimg.com/originals/9d/28/9b/9d289b29807bf52ad79dbc2e1e27d7ac.jpg" alt="Cute Dog" width="80" height="100" />
+    </div>
+    {% if message %}
+        <p class="message">{{ message }}</p>
+    {% endif %}
+    <form action="/" method="post">
+        <input 
+            type="text" 
+            name="guess" 
+            placeholder="Enter your guess ('x' to exit, 'n' for new game, 's' to show number)" 
+            required
+        >
+        <br><br>
+        <button type="submit">💖 Submit 💖</button>
+    </form>
+</body>
+</html>
