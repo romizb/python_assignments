@@ -37,3 +37,12 @@ pip install biopython
 ```
 
 
+## GC content fun facts!
+1. **GC content _stabilizes DNA_**, making it more heat-resistant in extreme environments. 🧬🔥  
+2. **High GC regions act as _molecular glue_**, holding DNA strands tightly together. 💪  
+3. **GC balance _drives evolution_**, shaping genomes to adapt to their environment. 🌍  
+4. **GC content influences _gene expression_** and how DNA folds into chromosomes. 🧠
+
+➡️ It is therfore the reason that GC content can immensely help understand the role and features of a said gene.
+
+
