@@ -43,6 +43,6 @@ pip install biopython
 3. **GC balance _drives evolution_**, shaping genomes to adapt to their environment. 🌍  
 4. **GC content influences _gene expression_** and how DNA folds into chromosomes. 🧠
 
-➡️ It is therfore the reason that GC content can immensely help understand the role and features of a said gene.
+➡️ It is therefore the reason that GC content can immensely help understand the role and features of a said gene. 
 
 
